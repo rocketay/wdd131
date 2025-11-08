@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WDD 131 - Dynamic Web Fundamentals - Tayron Murillo</title>
+  <title>WDD 131 - Dynamic Web Fundamentals - Tayron Murillo</title>
 
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tayron Murillo">
-    <meta name="author" content="Tayron Murillo">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tayron Murillo">
+  <meta name="author" content="Tayron Murillo">
 
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="https://www.linkedin.com/in/tayron-murillo-038937207/">LinkedIn</a>
-            <a href="https://byupw.instructure.com/">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng#:~:text=37%20Counsel%20with,the%20last%20day.">Scripture</a>
-            <a href="#">Final Project</a>
-        </nav>
-    </header>
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals - Tayron Murillo</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/tayron-murillo-038937207/">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng#:~:text=37%20Counsel%20with,the%20last%20day.">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Tayron Murillo</h1>
+  <main>
+    <h1>Tayron Murillo</h1>
 
-        <section class="card">
-            <h2>About Me</h2>
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; align-items: start;">
-                <p>
-                    My name is Tay. I am a web designer and developer from Costa Rica.
-                    I enjoy creating interactive and visually appealing web experiences.
-                    I’m currently learning new technologies and improving my design skills.
-                </p>
-                <img src="images/profilepic.jpeg" alt="Profile picture of Tayron Murillo">
-            </div>
-        </section>
+    <!-- About Me -->
+    <section class="card about-me">
+      <h2>About Me</h2>
+      <p>
+        My name is Tay. I am a web designer and developer from Costa Rica.
+        I enjoy creating interactive and visually appealing web experiences.
+        I’m currently learning new technologies and improving my design skills.
+      </p>
+      <img src="images/profilepic.jpeg" alt="Profile picture of Tayron Murillo">
+    </section>
 
-        <section class="card">
-            <h2>Costa Rica</h2>
-            <img src="images/Flag-Costa-Rica.webp" alt="Flag of Costa Rica">
-            <p>
-                Costa Rica is a beautiful country located in Central America, known for its biodiversity,
-                friendly people, and “Pura Vida” lifestyle. It’s home to amazing beaches, volcanoes,
-                and rainforests.
-            </p>
-        </section>
-    </main>
+    <!-- Costa Rica -->
+    <section class="card">
+      <h2>Costa Rica</h2>
+      <img src="images/costaricaflag.webp" alt="Flag of Costa Rica">
+      <p>
+        Costa Rica is a beautiful country in Central America, known for its biodiversity,
+        friendly people, and “Pura Vida” lifestyle.
+      </p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Tayron Murillo</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Tayron Murillo</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>

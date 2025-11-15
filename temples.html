@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Temple Album</div>
+
+    <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="primaryNav">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="gallery">
+  
+      <figure>
+        <img src="images/sd_california.webp" alt="San Diego California Temple">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/sl_utah.jpg" alt="Salt Lake City Temple">
+        <figcaption>Salt Lake City, Utah</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/rome_italy.webp" alt="Rome Italy Temple">
+        <figcaption>Rome, Italy</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/sj_costarica.jpeg" alt="San Jose, Costa Rica Temple">
+        <figcaption>San Jose, Costa Rica</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/paris.jpg" alt="Paris, France Temple">
+        <figcaption>Paris, France</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/puebla_mexico.webp" alt="Puebla Temple">
+        <figcaption>Puebal, Mexico</figcaption>
+      </figure>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> | Tayron Murillo | WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a page with information about Guatemala">
+  <meta name="author" content="Tayron Murillo">
+  <title>Guatemala</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Guatemala</h1>
+  </header>
+
+  <section class="hero" aria-label="Featured image of Guatemala">
+    <picture>
+      <source
+        srcset="images/guatemalamobile.webp"
+        media="(min-width: 700px)"
+        type="image/webp"
+      >
+      <img
+        src="images/guatemalalandscape.webp"
+        alt="Landscape view of Guatemala"
+        width="1200"
+        height="600"
+        loading="lazy"
+      >
+    </picture>
+  </section>
+
+      <section class="overlay">
+        <section class="card data-card" aria-label="Guatemala data">
+          <h2>Data</h2>
+          <dl class="facts">
+            <div class="fact">
+              <dt>Area</dt>
+              <dd>108,889 sq km</dd>
+            </div>
+            <div class="fact">
+              <dt>Population</dt>
+              <dd>~17 million</dd>
+            </div>
+            <div class="fact">
+              <dt>Capital</dt>
+              <dd>Guatemala City</dd>
+            </div>
+            <div class="fact">
+              <dt>Languages</dt>
+              <dd>Spanish</dd>
+            </div>
+            <div class="fact">
+              <dt>Currency</dt>
+              <dd>Guatemalan Quetzal (GTQ)</dd>
+            </div>
+            <div class="fact">
+              <dt>Time Zone</dt>
+              <dd>UTC−6</dd>
+            </div>
+            <div class="fact">
+              <dt>Calling Code</dt>
+              <dd>+502</dd>
+            </div>
+            <div class="fact">
+              <dt>Internet TLD</dt>
+              <dd>.gt</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="card weather-card" aria-label="Weather information">
+          <h2 class="weather-title">
+            Weather
+            <img
+              class="weather-icon"
+              src="images/weather.svg"
+              alt="Weather icon"
+              width="32"
+              height="32"
+            >
+          </h2>
+
+          <dl class="facts">
+            <div class="fact">
+              <dt>Temperature</dt>
+              <dd><span id="temp">10</span>°C</dd>
+            </div>
+            <div class="fact">
+              <dt>Conditions</dt>
+              <dd>Partly Cloudy</dd>
+            </div>
+            <div class="fact">
+              <dt>Wind</dt>
+              <dd><span id="wind">5</span> km/h</dd>
+            </div>
+            <div class="fact">
+              <dt>Wind Chill</dt>
+              <dd><span id="windchill">N/A</span></dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Tayron Murillo • Guatemala</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+:root {
+    --font-heading: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  
+    /* Guatemala colors */
+    --color-primary: #0b2d4f;   /* navy blue */
+    --color-accent: #5bc0eb;    /* light blue flag */
+    --color-surface: #ffffff;
+    --color-text: #111827;
+  
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    --radius: 10px;
+    --max-width: 1100px;
+  }
+  
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: #eef7ee;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .site-header {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 10px solid var(--color-accent);
+  }
+  
+  .site-header h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    letter-spacing: 0.5px;
+  }
+  
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .hero {
+    position: relative;
+  }
+  
+  .overlay {
+    background: var(--color-surface);
+    padding: 1.25rem 1rem 2rem;
+  }
+  
+  .card {
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+  
+  .card h2 {
+    margin: 0.75rem 0 1.25rem;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+  }
+  
+  .facts {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fact {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+    align-items: baseline;
+    padding: 0.4rem 0;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  dt {
+    font-weight: 700;
+    text-align: right;
+  }
+  
+  dd {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .weather-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+  
+  .weather-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .site-footer {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .site-footer p {
+    margin: 0.35rem 0;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 900px) {
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      padding: 0;
+    }
+  
+    .card {
+      position: absolute;
+      width: min(360px, 34vw);
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(3px);
+      padding: 0.9rem 1rem 1rem;
+      text-align: left;
+    }
+  
+    .card h2 {
+      margin: 0;
+      padding: 0.85rem 1rem;
+      font-size: 1.9rem;
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: calc(var(--radius) - 2px) calc(var(--radius) - 2px) 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .weather-card h2::after {
+      content: " ⛅";
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+  
+    .weather-icon {
+      display: none;
+    }
+  
+    .facts {
+      padding: 0.75rem 0.5rem 0.25rem;
+    }
+  
+    .fact {
+      max-width: none;
+      margin: 0;
+      grid-template-columns: 140px 1fr;
+      padding: 0.35rem 0;
+    }
+  
+    .data-card {
+      top: 15%;
+      left: 6%;
+    }
+  
+    .weather-card {
+      top: 40%;
+      right: 6%;
+    }
+  }
+  

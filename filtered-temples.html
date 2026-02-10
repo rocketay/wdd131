@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a page with 9 different pictures of templates">
+  <meta name="author" content="Tayron Murillo">
+  <title>Temple Album</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Temple Album</div>
+
+    <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav>
+        <a href="#" data-filter="home">Home</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
+      </nav>
+      
+  </header>
+
+  <main>
+    <h1 id="pageTitle">Home</h1>
+
+    <section class="temples">
+
+        <h2>Temples</h2>
+
+        <div id="temples" class="temple-cards"></div>
+
+    </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> | Tayron Murillo | WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+:root {
+    --primary: #233D4C;
+    --secondary: #FD802E;
+    --bg: #f7f9fc;
+    --text: #111827;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background: white;
+    border-left: 6px solid var(--secondary);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+h1,
+h2 {
+    margin: 0 0 .5rem 0;
+}
+
+
+.logo {
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: .5px;
+    padding: .25rem .6rem;
+    border-radius: 10px;S
+    background: var(--secondary);
+    color: white;
+}
+
+.swatches {
+    display: flex;
+    gap: 1rem;
+    margin-top: .75rem;
+    flex-wrap: wrap;
+}
+
+.swatch {
+    width: 160px;
+    height: 90px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    padding: .5rem;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 600;
+}
+
+.swatch.primary {
+    background: var(--primary);
+}
+
+.swatch.accent {
+    background: var(--secondary);
+}
+
+h1, h2{
+    font-family: 'Poppins', sans-serif;
+  }
+  

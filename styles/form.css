@@ -1,0 +1,219 @@
+:root {
+    --primary: #233D4C;
+    --accent: #FD802E;
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --text: #111827;
+
+    --radius: 14px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+header,
+footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    letter-spacing: .5px;
+}
+
+main {
+    padding: 1.25rem 1rem 2rem;
+}
+
+.review-form,
+.review-confirm {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .04);
+}
+
+.review-form {
+    padding: 1.25rem;
+}
+
+.field {
+    margin: 1rem 0;
+}
+
+label,
+legend {
+    font-weight: 700;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+legend {
+    padding: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: .85rem .9rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid rgba(253, 128, 46, .25);
+    border-color: var(--accent);
+}
+
+/* Rating layout */
+.rating {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .6rem;
+    align-items: center;
+}
+
+.rating label {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .7rem .5rem;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    background: #fff;
+    transition: transform .05s ease, border-color .15s ease;
+}
+
+.rating input {
+    margin-right: .35rem;
+    transform: translateY(1px);
+}
+
+.rating label:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+fieldset.field {
+    border: 0;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+/* Checkboxes */
+.checks {
+    display: grid;
+    gap: .5rem;
+}
+
+.checks label {
+    display: flex;
+    gap: .65rem;
+    align-items: center;
+    padding: .6rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.checks input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+}
+
+/* Submit button */
+.actions {
+    margin-top: 1.25rem;
+}
+
+.actions input[type="submit"] {
+    width: 100%;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: filter .15s ease, transform .05s ease;
+}
+
+.actions input[type="submit"]:hover {
+    filter: brightness(0.95);
+}
+
+.actions input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Review confirmation */
+.review-confirm {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.review-confirm a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.review-confirm a:hover {
+    text-decoration: underline;
+}
+
+.counter {
+    margin-top: .75rem;
+    color: var(--muted);
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .review-form {
+        padding: 1rem;
+    }
+
+    .rating {
+        gap: .45rem;
+    }
+
+    .rating label {
+        padding: .6rem .4rem;
+        font-size: .95rem;
+    }
+}

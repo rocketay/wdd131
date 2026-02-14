@@ -37,3 +37,8 @@ products.forEach(product => {
     option.textContent = product.name;
     productSelect.appendChild(option);
 });
+
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}

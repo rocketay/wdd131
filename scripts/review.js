@@ -19,3 +19,8 @@ const countSpan = document.getElementById("reviewCount");
 if (countSpan) {
     countSpan.textContent = count;
 }
+
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}

@@ -1,0 +1,314 @@
+:root {
+    --bg: #0b1116;
+    --panel: #12202a;
+    --panel2: #0f1b24;
+  
+    --text: #f6f7fb;
+    --muted: rgba(246, 247, 251, 0.78);
+    --line: rgba(246, 247, 251, 0.14);
+  
+    /* BRAND */
+    --brand-blue: #233d4c;
+    --brand-orange: #fd802e;
+  
+    --accent: var(--brand-orange);
+    --accent2: rgba(253, 128, 46, 0.55);
+  
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --radius: 18px;
+    --max: 1100px;
+    --pad: 18px;
+    --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  
+  body {
+    margin: 0;
+    font-family: var(--font);
+    line-height: 1.5;
+    color: var(--text);
+    background:
+      radial-gradient(1200px 700px at 15% 10%, rgba(253, 128, 46, 0.22), transparent 60%),
+      radial-gradient(900px 650px at 85% 15%, rgba(35, 61, 76, 0.28), transparent 55%),
+      var(--bg);
+  }
+  
+  img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+  a { color: inherit; }
+  
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid rgba(253, 128, 46, 0.6);
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+  
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+  
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: rgba(18, 32, 42, 0.95);
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    z-index: 50;
+  }
+  .skip-link:focus { left: 10px; }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
+  }
+  
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(11, 17, 22, 0.72);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    gap: 12px;
+  }
+  
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    border-radius: 12px;
+  }
+  
+  .nav-toggle {
+    border: 1px solid var(--line);
+    background: rgba(18, 32, 42, 0.70);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    right: var(--pad);
+    top: 64px;
+    background: rgba(18, 32, 42, 0.97);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 12px;
+    min-width: 190px;
+    box-shadow: var(--shadow);
+  }
+  .nav-links.is-open { display: flex; }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+  }
+  .nav-link:hover { background: rgba(255,255,255,0.06); }
+  
+  .nav-cta {
+    border: 1px solid rgba(253, 128, 46, 0.55);
+    background: rgba(253, 128, 46, 0.12);
+  }
+  
+  .hero { padding: 28px 0 18px; }
+  .hero-grid { display: grid; gap: 18px; }
+  .hero-copy h1 { font-size: 2rem; line-height: 1.1; margin: 10px 0 10px; }
+  .lead { color: var(--muted); font-size: 1.05rem; margin: 0 0 14px; }
+  
+  .eyebrow {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(18, 32, 42, 0.60);
+    margin: 0;
+  }
+  
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    background: rgba(18, 32, 42, 0.75);
+    color: var(--text);
+    font-weight: 700;
+  }
+  
+  .button.primary {
+    background: linear-gradient(135deg, rgba(253,128,46,0.98), rgba(35,61,76,0.95));
+    border-color: transparent;
+  }
+  
+  .button.ghost { background: transparent; }
+  
+  .hero-bullets { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
+  
+  .section { padding: 28px 0; }
+  .section.alt { background: rgba(18, 32, 42, 0.35); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  
+  .section-head { display: grid; gap: 6px; margin-bottom: 12px; }
+  .muted { color: var(--muted); }
+  
+  .cards { display: grid; gap: 14px; }
+  .card, .course-card, .filters, .favorites-panel, .form {
+    background: linear-gradient(180deg, rgba(35,61,76,0.18), rgba(18,32,42,0.78));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  
+  .course-card { padding: 0; overflow: hidden; }
+  .course-card img { border-radius: 0; }
+  .course-card-body { padding: 14px 16px 16px; }
+  
+  .text-link { color: var(--brand-orange); text-decoration: none; font-weight: 800; }
+  .text-link:hover { text-decoration: underline; }
+  
+  .cta-strip {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(253,128,46,0.16), rgba(35,61,76,0.22));
+    border: 1px solid var(--line);
+  }
+  
+  .steps { margin: 14px 0 0; padding-left: 18px; color: var(--muted); }
+  .steps h3 { color: var(--text); margin-bottom: 4px; }
+  
+  .page-head { margin-bottom: 16px; }
+  .page-head h1 { margin: 0 0 8px; }
+  
+  .filters { margin-bottom: 14px; }
+  .filter-grid { display: grid; gap: 12px; }
+  
+  .field { display: grid; gap: 6px; }
+  .field span { color: var(--muted); font-weight: 700; }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(11, 17, 22, 0.65);
+    color: var(--text);
+  }
+  textarea { resize: vertical; }
+  
+  .results-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid var(--line);
+    margin-top: 14px;
+    padding-top: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .catalog { margin-top: 14px; }
+  
+  .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  
+  .pill {
+    border: 1px solid var(--line);
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+  }
+  
+  .course-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  
+  .fav-btn {
+    border: 1px solid var(--line);
+    background: rgba(11, 17, 22, 0.55);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 900;
+  }
+  .fav-btn.is-on { border-color: rgba(253,128,46,0.8); }
+  
+  .favorites-panel { margin-top: 14px; }
+  .favorites-list { display: grid; gap: 10px; margin: 10px 0 0; }
+  
+  .fav-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px;
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .check { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); margin-top: 8px; }
+  .check input { width: auto; margin-top: 4px; }
+  
+  .form-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  
+  .about-grid { display: grid; gap: 16px; }
+  .about-media { display: grid; gap: 12px; }
+  
+  .callout {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px;
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .list { color: var(--muted); padding-left: 18px; }
+  
+  .site-footer { border-top: 1px solid var(--line); padding: 22px 0; margin-top: 22px; }
+  .footer-grid { display: grid; gap: 14px; }
+  .footer-brand { font-weight: 900; margin: 0 0 6px; }
+  .footer-links { display: grid; gap: 8px; }
+  
+  .footer-links a { text-decoration: none; color: var(--muted); }
+  .footer-links a:hover { text-decoration: underline; color: var(--text); }
+  

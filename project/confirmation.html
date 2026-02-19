@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Confirmation page for your Speaky enrollment request." />
+  <meta name="author" content="Tayron Murillo">
+  <title>Confirmation | Speaky</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/form.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Speaky Home">
+        <img class="brand-logo" src="images/speakylogo.png" alt="Speaky logo" width="400" height="100" loading="lazy">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">Menu</span>
+      </button>
+
+      <div id="nav-links" class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-cta" href="form.html">Enroll</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="page-head">
+        <h1>Enrollment Confirmation</h1>
+        <p class="lead">Here’s what we received from your form submission.</p>
+      </div>
+
+      <section class="card" id="confirmationCard" aria-live="polite">
+        <p class="muted">Loading your submission…</p>
+      </section>
+
+      <div class="cta-strip">
+        <div>
+          <h2>Next step</h2>
+          <p class="muted">Go save course favorites to build your learning plan.</p>
+        </div>
+        <a class="button primary" href="courses.html">Go to Courses</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Speaky</p>
+        <p class="muted">Storytelling courses for clearer speaking and memorable communication.</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="form.html">Enroll</a>
+        <a href="references.html">References</a>
+      </div>
+
+      <div class="footer-meta">
+        <p class="muted"><span id="year"></span> • Built by Tay</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse Speaky storytelling courses with filters and save favorites to your learning plan." />
+  <meta name="author" content="Tayron Murillo">
+  <title>Courses | Speaky</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/courses.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Speaky Home">
+        <img class="brand-logo" src="images/speakylogo.png" alt="Speaky logo" width="400" height="100" loading="lazy">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">Menu</span>
+      </button>
+
+      <div id="nav-links" class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="courses.html" aria-current="page">Courses</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-cta" href="form.html">Enroll</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="page-head">
+        <h1>Courses Catalog</h1>
+        <p class="lead">
+          Filter by level, duration, and mode. Click <strong>Save</strong> to build your favorites list (stored on this device).
+        </p>
+      </div>
+
+      <section class="filters" aria-label="Course filters">
+        <div class="filter-grid">
+          <label class="field">
+            <span>Level</span>
+            <select id="levelFilter">
+              <option value="all">All</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Mode</span>
+            <select id="modeFilter">
+              <option value="all">All</option>
+              <option value="Self-paced">Self-paced</option>
+              <option value="Live">Live</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Max minutes</span>
+            <select id="minutesFilter">
+              <option value="all">Any</option>
+              <option value="45">Up to 45</option>
+              <option value="75">Up to 75</option>
+              <option value="120">Up to 120</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Sort</span>
+            <select id="sortBy">
+              <option value="recommended">Recommended</option>
+              <option value="az">A → Z</option>
+              <option value="priceLow">Price: low → high</option>
+              <option value="minutesLow">Minutes: low → high</option>
+            </select>
+          </label>
+
+          <button class="button ghost" id="clearFilters" type="button">Clear filters</button>
+        </div>
+
+        <div class="results-bar" aria-live="polite">
+          <p class="muted">Showing <span id="resultsCount">0</span> course(s).</p>
+          <p class="muted">Favorites saved: <span id="favoritesCount">0</span></p>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog" aria-label="Courses catalog">
+        <div id="courseGrid" class="cards three"></div>
+      </section>
+
+      <section class="section alt">
+        <div class="cta-strip">
+          <div>
+            <h2>Your favorites</h2>
+            <p class="muted">Use this list as your personal learning plan. You can remove items anytime.</p>
+          </div>
+          <button class="b

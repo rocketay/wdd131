@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Enroll in a Speaky storytelling course. Submit your preferences and see a confirmation page." />
+  <meta name="author" content="Tayron Murillo">
+  <title>Enroll | Speaky</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/form.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Speaky Home">
+        <img class="brand-logo" src="images/speakylogo.png" alt="Speaky logo" width="400" height="100" loading="lazy">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">Menu</span>
+      </button>
+
+      <div id="nav-links" class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-cta" href="form.html" aria-current="page">Enroll</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="page-head">
+        <h1>Enroll</h1>
+        <p class="lead">Fill out this form to enroll. You’ll see a confirmation page after submission.</p>
+      </div>
+
+      <form class="form" method="get" action="confirmation.html" novalidate>
+        <fieldset>
+          <legend>Your information</legend>
+
+          <label class="field">
+            <span>Full name *</span>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+          </label>
+
+          <label class="field">
+            <span>Email *</span>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Course preferences</legend>
+
+          <label class="field">
+            <span>Course *</span>
+            <select id="courseId" name="courseId" required>
+              <option value="">Select a course…</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Experience level *</span>
+            <select id="experience" name="experience" required>
+              <option value="">Select…</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Preferred schedule</span>
+            <select id="schedule" name="schedule">
+              <option value="Flexible">Flexible</option>
+              <option value="Weeknights">Weeknights</option>
+              <option value="Weekends">Weekends</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>What is your main goal? *</span>
+            <textarea id="goal" name="goal" rows="4" required></textarea>
+          </label>
+
+          <label class="field">
+            <span>Confidence today (1–5)</span>
+            <input id="confidence" name="confidence" type="range" min="1" max="5" value="3" />
+            <span class="muted" id="confidenceValue">3</span>
+          </label>
+
+          <label class="check">
+            <input id="newsletter" name="newsletter" type="checkbox" value="yes" />
+            <span>Send me practice prompts (1 email per week)</span>
+          </label>
+        </fieldset>
+
+        <input type="hidden" id="formTimestamp" name="formTimestamp" value="" />
+
+        <div class="form-actions">
+          <button class="button primary" type="submit">Submit enrollment</button>
+          <button class="button ghost" type="reset">Reset</button>
+        </div>
+
+        <p class="muted" id="formMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Speaky</p>
+        <p class="muted">Storytelling courses for clearer speaking and memorable communication.</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="form.html">Enroll</a>
+        <a href="references.html">References</a>
+      </div>
+
+      <div class="footer-meta">
+        <p class="muted"><span id="year"></span> • Built by Tay</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
